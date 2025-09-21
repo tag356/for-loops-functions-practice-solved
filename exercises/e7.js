@@ -6,7 +6,18 @@
 
 export function getClientWithLeastPositiveBalance(array) {
   // Your code goes here...
-  
+  let minPositiveBalance = Infinity;
+  let clientWithMinBalance = null;
+
+  for (let i = 0; i < array.length; ++i) {
+    const account = array[i];
+    if (account.balance > 0 && account.balance < minPositiveBalance) {
+      minPositiveBalance = account.balance;
+      clientWithMinBalance = account;
+    }
+  }
+
+  return clientWithMinBalance ? [clientWithMinBalance] : [];
 }
 
 // === TEST YOURSELF ===
