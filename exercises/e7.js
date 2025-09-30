@@ -6,7 +6,7 @@
 
 export function getClientWithLeastPositiveBalance(array) {
   // Your code goes here...
-  let minPositiveBalance = Infinity;
+  let minPositiveBalance = array[0].balance;
   let clientWithMinBalance = null;
 
   for (let i = 0; i < array.length; ++i) {

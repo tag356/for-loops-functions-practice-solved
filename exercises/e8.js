@@ -5,7 +5,7 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
-  let maxBalance = -Infinity;
+  let maxBalance = array[0].balance;
   let clientWithMaxBalance = null;
 
   for (let i = 0; i < array.length; ++i) {
